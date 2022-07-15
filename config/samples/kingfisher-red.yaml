@@ -1,0 +1,6 @@
+apiVersion: birds.github.com/v1beta1
+kind: Kingfisher
+metadata:
+  name: kingfisher-red
+spec:
+  colour: red

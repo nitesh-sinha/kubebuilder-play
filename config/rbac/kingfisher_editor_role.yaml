@@ -1,0 +1,24 @@
+# permissions for end users to edit kingfishers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kingfisher-editor-role
+rules:
+- apiGroups:
+  - birds.github.com
+  resources:
+  - kingfishers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - birds.github.com
+  resources:
+  - kingfishers/status
+  verbs:
+  - get

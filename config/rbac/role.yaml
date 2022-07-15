@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - birds.github.com
+  resources:
+  - kingfishers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - birds.github.com
+  resources:
+  - kingfishers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - birds.github.com
+  resources:
+  - kingfishers/status
+  verbs:
+  - get
+  - patch
+  - update
